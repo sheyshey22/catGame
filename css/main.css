@@ -57,27 +57,21 @@ button:hover{
   margin-top: 75%;
   float:right;
 }
-table td{
-  width: 200px;
-  height: 100px;
-  border: 1px solid #555;
-  cursor: pointer;
+#cell1,#cell2,#cell3 {
+  width:100px;
+  height:100px;
+  border:3px solid black;
+  float: left;
 }
-table td:before {
-  font-size: 4em;
-  line-height: 1;
+#cell4,#cell5,#cell6 {
+  width:100px;
+  height:100px;
+  float: left;
+  border:3px solid black;
 }
-table td.iconX:before {
-  font-size:50px;
-  content: "x";
-  color: #FFA500;
-}
-table td.iconO:before {
-  font-size:50px;
-  content: "o";
-  color: #191970;
-}
-.message{
-  padding: 10px;
-  border: 1px solid #333;
+#cell7,#cell8,#cell9 {
+  width:100px;
+  height:100px;
+  float: left;
+  border:3px solid black;
 }

@@ -1,10 +1,13 @@
 $(document).ready(function(){
-  var player = 1;
+  var nombre1 = $('#name1').val();
+  console.log(nombre1);
+  var nombre2 = $('#name2').val();
+  console.log(nombre2);
+  var player=1;
   var table = $('table');
   var result = $('.result');
   var turn = $('.turn');
   nextGame(turn, player);
-  
   $('td').click(function() {
     td=$(this);
     var status = is_full(td);
@@ -28,15 +31,14 @@ $(document).ready(function(){
     result.html('');
     reset(table);
     nextGame(turn, player);
-  });
-  
+  }); 
 });
 
 function is_full(td) {
   if(td.hasClass('iconX') || td.hasClass('iconO')) {
     return 1;
   } else {
-    return 0;
+    return false;
   }
 }
 function setNewStatus(td, icon) {
