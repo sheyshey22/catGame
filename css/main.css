@@ -21,7 +21,6 @@ button:hover{
   background: #FFA500;
   color:#333;
 }
-
 .nav{
   margin-top: 20px;
   margin-left: 20px;
@@ -37,25 +36,16 @@ button:hover{
   margin-top: -200px;
   margin-left: -300px;
   font-size: 30px;
-
 }
 #player{
   width:610px;
   margin:30px auto;
   font-size: 20px;
-
 }
-#board {
-  display: inline-block;
+.XOs{
+  width:380px;  
   margin: 0 auto;
-  width: 800px;
-  height: 750px;
-  table-layout:fixed;
-  font-size: 30px;
-}
-#btn3{
-  margin-top: 75%;
-  float:right;
+  height:380px;
 }
 #cell1,#cell2,#cell3 {
   width:100px;
@@ -74,4 +64,30 @@ button:hover{
   height:100px;
   float: left;
   border:3px solid black;
+}
+.square{
+  font-size: 50px;
+  text-align:center;
+}
+.square:click{
+}
+.clickable{
+color: #333;
+}
+
+#score1{
+font: 30px;
+background: #666;
+width:80px;
+height:20px;
+margin:0 auto;
+color:#FFF;
+}
+#score2{
+font: 30px;
+background: #666;
+width:380px;
+height:20px;
+margin:0 auto;
+color:#FFF;
 }

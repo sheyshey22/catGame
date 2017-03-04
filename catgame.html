@@ -6,104 +6,8 @@
     <title>Gato Loco</title>
     <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src= "js/jquery-3.1.1.min.js"></script>
-<style>
-.XOs{
-  width:380px;  
-  margin: 0 auto;
-  height:380px;
-  }
-h2{
- width:380px;    
-  margin: 0 auto;
-  font-family:"Lucida Console", Monaco, monospace;
-  color:#039;
-  padding:10px 5px;
-  }
-
-#cell1,#cell2,#cell3 {
-  width:100px;
-  height:100px;
-  border:3px solid black;
-  float: left;
-}
-#cell4,#cell5,#cell6 {
-  width:100px;
-  height:100px;
-  float: left;
-  border:3px solid black;
-}
-#cell7,#cell8,#cell9 {
-  width:100px;
-  height:100px;
-  float: left;
-  border:3px solid black;
-}
-.square{
-    font-size: 50px;
-    text-align:center;
-    font-family: "Comic Sans MS", cursive;
-}
-.square:click{
-}
-.clickable{
-color: #333;
-}
-.x{
-background-color: #CCC;
-}
-.o{
-background-color: #DDD;
-}​
-#score1{
-font: 30px;
-background: #666;
-width:80px;
-height:20px;
-margin:0 auto;
-font-family:"Lucida Console", Monaco, monospace;
-color:#FFF;
-}
-#score2{
-font: 30px;
-background: #666;
-width:380px;
-height:20px;
-margin:0 auto;
-font-family:"Lucida Console", Monaco, monospace;
-color:#FFF;
-}
-#startagain{
-
-margin-top:10px; 
-margin-left:390px; 
-border-top: 1px solid #96d1f8;
-background: #65a9d7;
-background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
-background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-background: -o-linear-gradient(top, #3e779d, #65a9d7);
-padding: 8.5px 17px;
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
-border-radius: 3px;
--webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
--moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-box-shadow: rgba(0,0,0,1) 0 1px 0;
-text-shadow: rgba(0,0,0,.4) 0 1px 0;
-color: white;
-font-size: 18px;
-font-family: Helvetica, Arial, Sans-Serif;
-text-decoration: none;
-vertical-align: middle;
-}
-#startagain:hover {
-border-top-color: #28597a;
-background: #fff;
-color: #999;
-}
-</style>
 </head>
 <body>
     <div id="welcome" class="page1 container-fluid">
@@ -111,8 +15,7 @@ color: #999;
             <li role="presentation" ><a href="index.html">Inicio</a></li>
             <li role="presentation"><a href="#">Historial</a></li>
         </ul>
-    <body>
-<h2>Let's play Tic Tac Toe!</h2>
+<h2>Let's play!</h2>
 <div class="XOs">
     <div id="cell1" class="square clickable" data-val="1"></div>
     <div id="cell2" class="square clickable" data-val="2"></div>
@@ -126,89 +29,7 @@ color: #999;
   </div>​
 <div id="score1"></div>
 <div id="score2"></div>
-<button id="startagain">Start again</button>
-
+<button id="startagain">Reiniciar Juego</button> 
+<script src="js/main.js"></script>
 </body>
-<script>
-    
-    var round="x";
-    var player1=[]; 
-    var player2=[];  
-     var win1 = [1,5,9]; //winning cobinations
-     var win2 = [1,4,7];
-     var win3 = [1,2,3];
-     var win4 = [4,5,6];     
-     var win5 = [7,8,9];
-     var win6 = [2,5,8];
-     var win7 = [3,6,9];
-     var win8 = [3,5,7];
-     var wins = [win1, win2, win3, win4, win5, win6, win7, win8]; //all 
-     var score1 = 0;
-     var score2=0;
-     var startGame=function(){
-           player1 = [];
-           player2 = [];
-         $(".square").each(function(){
-          $(this).text("");
-        });
-         wins=[win1, win2, win3, win4, win5, win6, win7, win8];
-         round="x";
-     }    
-     
-    $(".clickable").click(function(){
-        var celltext=$(this).text();
-        if(celltext==""){
-            if(round=="x"){
-                $(this).text("x");
-                player1.push($(this).data("val"));
-                round="o";
-            }
-            else{
-                $(this).text("o");
-                player2.push($(this).data("val"));
-                 round="x";
-                
-                } 
-               
-               $.each(wins, function(i,v){
-                  if(player1.length>=3){
-                    var flag = true;
-                
-                    $.each(v,function(key,value){
-                        if($.inArray(value,player1)==-1){
-                          flag = false;
-                        }
-                    })
-                    if(flag == true){
-                      alert("player1 win!");
-                       score1++ ;
-                      $("#score1").text("X: SCORE="+score1);    
-                      return;                  
-                                                       
-                                   }
-                  }
-              
-                  if(player2.length>=3){
-                    var flag = 1;
-                    $.each(v,function(key,value){
-                        if($.inArray(value,player2)==-1){
-                          flag = 2;
-                        }
-                    })
-                    if(flag == 1){
-                      alert("player2 win!");
-                       score2++ ;                  
-                      $("#score2").text("O: SCORE="+score2);
-                      return;
-                      
-                                         }
-                  }
-               });
-            };
-   });
- $("#startagain").click(function(){
-                      startGame();
-                     
-                     });
-</script>
 </html>
