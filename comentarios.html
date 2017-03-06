@@ -33,16 +33,33 @@
         </div>
     </nav>
     </section>
-    <section id="historial">
-        <h2>Historial</h2>
-        <br>
-           <div class="card center-block">
-              <div class="card-block">
-                <h4>Emanuel le gano a blabla...</h4>
-                <a href="comentarios.html" class="card-link pull-right">Comentarios</a>
-              </div>
-            </div> 
-    </section>        
+    <section id="comentarios">
+        <div class="container">
+        <div class="row">
+            <h2 class="text-center">Agregar Comentarios</h2>
+            <div>
+                <div>
+                    <div id="sendComment"></div>
+                </div>
+                    <form>
+                      <div class="form-group">
+                        <label>Tu Nombre</label>
+                        <input type="text" class="form-control" id="name3" aria-describedby="Nombre" placeholder="Nombre">
+                      </div>
+                        <div class="form-group">
+                        <label>Tu Comentario</label>
+                        <textarea class="form-control" id="boxComent" rows="3"></textarea>
+                      </div>
+                    </form>
+                </div>
+                <div class="text-center">
+                    <button id="btn5" >Enviar</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+  
 <script src="js/main.js"></script>
 <script src="js/navpages.js"></script>
 <script src="js/comment.js"></script>

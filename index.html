@@ -5,21 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Gato Loco</title>
     <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src= "js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="javascript" src= "js/jquery-3.1.1.min.js"></script>
+
 </head>
 <body>
-    <div id="welcome" class="page1 container-fluid">
-        <ul class="nav navbar-nav  pull-right">
-            <li role="presentation"><a href="index.html">Inicio</a></li>
-            <li role="presentation"><a href="#">Historial</a></li>
-        </ul>
+    <section>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+        </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation"><a href="index.html">Inicio</a></li>
+                    <li role="presentation"><a href="historial.html">Historial</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </section>
+    <!-- page one -->
+    <section id="welcome" class="container text-center">
         <div class="hero-sec">
             <h1>Bienvenido a Gato Loco</h1>
-            <button><a href="player.html">Iniciar Juego</a></button> 
+            <button id="btn1">Iniciar Juego</button> 
         </div>
-    </div>
+    </section>
+    <!-- page two -->
+    <section id="player" class="container">
+        <div class="row">
+            <form class="form-horizontal">
+            <div class="form-group">
+            <label type="text"  class="col-sm-7 control-label">Ingrese el nombre jugador 1</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="name1" placeholder="Emmanuel">
+            </div>
+            </div>
+            <div class="form-group">
+            <label type="text" class="col-sm-7 control-label">Ingrese el nombre jugador 2</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="name2" placeholder="Irene">
+            </div>
+            </div>
+        </form>
+        </div>
+        
+        <button id="btn2">Comenzar</button>
+    </section>
+    <!-- page three -->
+    <section id="gamestart" class="container">
+        <div class="row">
+            <div class="col-md-6">
+              <h2>Let's play!</h2>
+              <br>
+              <div class="board">
+                <div id="cell1" class="square clickable" data-val="1"></div>
+                <div id="cell2" class="square clickable" data-val="2"></div>
+                <div id="cell3" class="square clickable" data-val="3"></div>
+                <div id="cell4" class="square clickable" data-val="4"></div>
+                <div id="cell5" class="square clickable" data-val="5"></div>
+                <div id="cell6" class="square clickable" data-val="6"></div>
+                <div id="cell7" class="square clickable" data-val="7"></div>
+                <div id="cell8" class="square clickable" data-val="8"></div>
+                <div id="cell9" class="square clickable" data-val="9"></div>
+              </div>​
+            <div id="ganador"></div>
+            </div>
+            <div class="col-md-6">
+                <h2>...and the winner is</h2>
+                <br>
+                <div class="panel panel-default">
+                <div class="panel-heading">Score Player 1 : X</div>
+                <div id="score1" class="panel-body">
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Score Player 2: O</h3>
+              </div>
+              <div id="score2" class="panel-body">
+              </div>
+            </div>
+              <button id="#btn4">Mandar al historial</button>
+            </div>
+            <div id="result"> 
+            </div>
+          </div>
+    </section>  
+    <section id="comment">
+        <div>
+            ygiugiugklorem  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed omnis dolorum consequatur voluptates asperiores voluptatum aliquam recusandae mollitia, laborum tempora exercitationem ad libero veritatis, id repudiandae facilis, fugit atque quis?
+        </div>
+    </section>      
 <script src="js/main.js"></script>
+<script src="js/navpages.js"></script>
+<script src="js/comment.js"></script>
+
 </body>
 </html>

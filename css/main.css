@@ -1,16 +1,16 @@
-body{
+body section{
   font-family: 'Finger Paint', cursive;
   text-align: center;
-}
-h1{
-  margin-bottom: 10%;
 }
 a{
   text-decoration: none;
   color: #333;
 }
+a:hover{
+  text-decoration: none;
+  color: #333;
+}
 button{
-  margin-top: 20px;
   background: #ffffb3;
   font-size: 25px;
   border-radius: 20%;
@@ -23,29 +23,39 @@ button:hover{
 }
 .nav{
   margin-top: 20px;
-  margin-left: 20px;
   font-size: 20px;
 }
 .hero-sec{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 600px;
-  max-width: 800px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -300px;
-  font-size: 30px;
+  position:absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top:50%;
+  width:50%px;
 }
+
 #player{
-  width:610px;
   margin:30px auto;
   font-size: 20px;
+  width:50%;
+  display: none;
 }
-.XOs{
+#gamestart{
+  display: none;
+}
+#comment{
+  display: none;
+}
+.board{
   width:380px;  
   margin: 0 auto;
   height:380px;
+}
+.x{
+  color:#FFD700;
+}
+.o{
+  color:  #191970;
 }
 #cell1,#cell2,#cell3 {
   width:100px;
@@ -71,23 +81,9 @@ button:hover{
 }
 .square:click{
 }
-.clickable{
-color: #333;
-}
-
-#score1{
-font: 30px;
-background: #666;
-width:80px;
-height:20px;
-margin:0 auto;
-color:#FFF;
-}
-#score2{
-font: 30px;
-background: #666;
-width:380px;
-height:20px;
-margin:0 auto;
-color:#FFF;
+.card{
+  width:45%;
+  height: 95px;
+  border: 1px solid #333;
+  border-radius: .25rem;
 }
